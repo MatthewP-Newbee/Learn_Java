@@ -24,12 +24,13 @@ public class Manager extends Employee{
     {
         if (!super.equals(otherObject)) return false;
         Manager other = (Manager) otherObject;
+
         return bonus == other.bonus;
     }
 
     public int hashCode()
     {
-        return super.hashCode() + 17 * new java.lang.Double.valueOf(bonus).hashCode();
+        return super.hashCode() + 17 * new Double(bonus).hashCode();
     }
 
     public String toString()
